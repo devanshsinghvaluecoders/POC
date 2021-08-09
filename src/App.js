@@ -32,6 +32,7 @@ const App = () => {
         setCountryInfo(data);
       });
   }, []);
+  console.log("test");
   // useEffect(()=>{
   //   fetch('/all.json')
   //   .then(res=>res.json())
@@ -74,9 +75,8 @@ const App = () => {
       .then((data) => {
         setInputCountry(countryCode);
         setCountryInfo(data);
-        if(countryCode!=='worldwide'){
-        setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
-          
+        if (countryCode !== "worldwide") {
+          setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
         }
         setMapZoom(4);
       });
